@@ -13,7 +13,7 @@ sleep 3
 #
 #
 #
-echo "Welcome tarnished. Please select your starting class:
+echo "Welcome Tarnished. Please select your starting class:
 1 - Samurai
 2 - Prisoner
 3 - Prophet"
