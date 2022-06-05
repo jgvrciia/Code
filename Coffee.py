@@ -16,11 +16,13 @@ print("Hello, " + name + " thank you so much for coming in today\n")
 time.sleep(1)
 menu = "Coffee: $3 \nEspresso: $5 \nFrappuccino: $7 \nLatte: $6 \nTea: $2 \nCappuccino: $4\n"
 
-order = input(("What would you like to drink? Today's Menu is\n" + menu + "\n> ")).casefold()
+order = input(
+    ("What would you like to drink? Today's Menu is\n" + menu + "\n> ")).casefold()
 
 while order != "Coffee".casefold() and order != "Espresso".casefold() and order != "Frappuccino".casefold() and order != "Latte".casefold() and order != "Tea".casefold() and order != "Cappuccino".casefold():
     print("Please Choose a menu option")
-    order = input(("What would you like to drink? Today's Menu is\n" + menu + "\n> ")).casefold()
+    order = input(
+        ("What would you like to drink? Today's Menu is\n" + menu + "\n> ")).casefold()
 
 
 print("Sounds good " + name)
@@ -53,4 +55,5 @@ print("Thank you. Your total is: $" + str(total) + ".00\n")
 
 time.sleep(3)
 
-print("Thank you " + name + ", We'll have your " + amount + " " + order + "'s ready in a few minutes")
+print("Thank you " + name + ", We'll have your " +
+      amount + " " + order + "'s ready in a few minutes")
