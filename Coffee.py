@@ -63,3 +63,4 @@ else:
     print("Thank you " + name + ", We'll have your " +
           amount + " " + order + "'s ready soon")
 
+input("HAVE A NICE DAY!!")
