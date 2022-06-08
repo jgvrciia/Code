@@ -1,11 +1,12 @@
-# Let's build a robot barista
+# Let's Build A Bobot Barista
 import time
 
 print("Hello, Welcome to Baytech Coffee!!!\n\n\n")
 time.sleep(3)
+
 name = input("What is your name?\n> ")
 
-# We don't want Evil Diego's or Eddie's in our shop
+# We Don't Want Evil Diego's Or Duc's In Our Shop
 if name.capitalize() == "Diego" or name.capitalize() == "Duc":
     evil = input("Are you evil? (yes/no)\n> ")
     if evil.casefold() == "yes":
@@ -16,19 +17,23 @@ if name.capitalize() == "Diego" or name.capitalize() == "Duc":
         print("Sorry for the confusion we have an evil " +
               name.capitalize() + " roaming around")
 
-print("Hello, " + name.capitalize() + " thank you so much for coming in today\n")
+
+print("Hello, " + name.capitalize() + " thank you so much for coming in today.\n")
 time.sleep(1)
+
+# Creating Menu Options
+
 menu = "Coffee: $3 \nEspresso: $5 \nFrappuccino: $7 \nLatte: $6 \nTea: $2 \nCappuccino: $4\n"
 
 order = input(
     ("What would you like to drink? Today's menu is:\n" + menu + "\n> ")).casefold()
 
 while order != "Coffee".casefold() and order != "Espresso".casefold() and order != "Frappuccino".casefold() and order != "Latte".casefold() and order != "Tea".casefold() and order != "Cappuccino".casefold():
-    print("Sorry we don't make that here. Please choose a menu option")
+    print("Sorry we don't make that here. Please choose a menu option.")
     order = input(
         ("What would you like to drink? Today's menu is\n" + menu + "\n> ")).casefold()
 
-print("Sounds good " + name.capitalize())
+print("Sounds good " + name.capitalize() + ".")
 
 Coffee_price = 3
 Espresso_price = 5
@@ -57,13 +62,13 @@ print("Thank you. Your total is: $" + str(total) + ".00\n")
 time.sleep(3)
 
 if amount == "1":
-    print("Thank you " + name + ", We'll have your " + order + " ready soon")
+    print("Thank you " + name.capitalize() + ", we'll have your " + order.capitalize() + " ready soon.\n")
     time.sleep(4)
-    print("Here is your " + order)
+    print("Here is your " + order.capitalize())
 else:
-    print("Thank you " + name + ", We'll have your " +
-          amount + " " + order + "'s ready soon")
+    print("Thank you " + name.capitalize() + ", we'll have your " +
+          amount + " " + order.capitalize() + "'s ready soon.\n")
     time.sleep(4)
-    print("Here is your " + order)
+    print("Here is your " + order.capitalize() + ".")
 
-input("HAVE A NICE DAY!!")
+input("\nHAVE A NICE DAY!!\n")
