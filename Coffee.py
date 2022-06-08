@@ -83,4 +83,5 @@ else:
     time.sleep(4)
     print("Here is your " + ORDER.capitalize() + ".")
 
+time.sleep(2)
 input("\nHAVE A NICE DAY!!\n")
