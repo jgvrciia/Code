@@ -9,11 +9,13 @@ NAME = input("What is your name?\n> ")
 
 # We Don't Want Evil Diego's Or Duc's In Our Shop
 
-if NAME.capitalize() == "Diego" or NAME.capitalize() == "Duc":
+if NAME.capitalize() == "Diego" or NAME.capitalize() == "Duc" or NAME.capitalize() == "Chris":
     EVIL = input("Are you evil? (yes/no)\n> ")
-    if EVIL.casefold() == "yes":
+    DEEDS = int(input("How many good deeds have you done? \n>"))
+    if EVIL.casefold() == "yes" and DEEDS < 3:
         print("GET OUT EVIL " + NAME.upper() +
               "!! YOU'RE BANNED FROM THIS COFFEE SHOP!!")
+        print("I CAN'T BELIEVE YOU'VE ONLY DONE " + str(DEEDS) + " GOOD DEEDS; THAT'S A SHAME. NO COFFEE FOR YOU.")
         exit()
     else:
         print("Sorry for the confusion we have an evil " +
