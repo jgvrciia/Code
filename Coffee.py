@@ -9,10 +9,12 @@ name = input("What is your name?\n> ")
 if name.capitalize() == "Diego" or name.capitalize() == "Duc":
     evil = input("Are you evil? (yes/no)\n> ")
     if evil.casefold() == "yes":
-        print("GET OUT EVIL " + name.upper() + "!! YOU'RE BANNED FROM THIS COFFEE SHOP!!")
+        print("GET OUT EVIL " + name.upper() +
+              "!! YOU'RE BANNED FROM THIS COFFEE SHOP!!")
         exit()
     else:
-        print("Sorry for the confusion we have an evil " + name.capitalize() + " roaming around")
+        print("Sorry for the confusion we have an evil " +
+              name.capitalize() + " roaming around")
 
 print("Hello, " + name.capitalize() + " thank you so much for coming in today\n")
 time.sleep(1)
