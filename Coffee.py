@@ -5,65 +5,66 @@ import time
 print("Hello, Welcome to Baytech Coffee!!!\n\n\n")
 time.sleep(3)
 
-name = input("What is your name?\n> ")
+NAME = input("What is your name?\n> ")
 
 # We Don't Want Evil Diego's Or Duc's In Our Shop
 
-if name.capitalize() == "Diego" or name.capitalize() == "Duc":
-    evil = input("Are you evil? (yes/no)\n> ")
-    if evil.casefold() == "yes":
-        print("GET OUT EVIL " + name.upper() +
+if NAME.capitalize() == "Diego" or NAME.capitalize() == "Duc":
+    EVIL = input("Are you evil? (yes/no)\n> ")
+    if EVIL.casefold() == "yes":
+        print("GET OUT EVIL " + NAME.upper() +
               "!! YOU'RE BANNED FROM THIS COFFEE SHOP!!")
         exit()
     else:
         print("Sorry for the confusion we have an evil " +
-              name.capitalize() + " roaming around")
+              NAME.capitalize() + " roaming around")
 
 
-print("Hello, " + name.capitalize() + " thank you so much for coming in today.\n")
+print("Hello, " + NAME.capitalize() +
+      " thank you so much for coming in today.\n")
 time.sleep(1)
 
 # Creating Menu Options
 
-menu = "Coffee: $3 \nEspresso: $5 \nFrappuccino: $7 \nLatte: $6 \nTea: $2 \nCappuccino: $4\n"
+MENU = "Coffee: $3 \nEspresso: $5 \nFrappuccino: $7 \nLatte: $6 \nTea: $2 \nCappuccino: $4\n"
 
-order = input(
-    ("What would you like to drink? Today's menu is:\n" + menu + "\n> ")).casefold()
+ORDER = input(
+    ("What would you like to drink? Today's menu is:\n" + MENU + "\n> ")).casefold()
 
 # Loop For Ordering The Right Beverage
 
-while order != "Coffee".casefold() and order != "Espresso".casefold() and order != "Frappuccino".casefold() and order != "Latte".casefold() and order != "Tea".casefold() and order != "Cappuccino".casefold():
+while ORDER != "Coffee".casefold() and ORDER != "Espresso".casefold() and ORDER != "Frappuccino".casefold() and ORDER != "Latte".casefold() and ORDER != "Tea".casefold() and ORDER != "Cappuccino".casefold():
     print("Sorry we don't make that here. Please choose a menu option.")
-    order = input(
-        ("What would you like to drink? Today's menu is\n" + menu + "\n> ")).casefold()
+    ORDER = input(
+        ("What would you like to drink? Today's menu is\n" + MENU + "\n> ")).casefold()
 
-print("Sounds good " + name.capitalize() + ".")
+print("Sounds good " + NAME.capitalize() + ".")
 
 # Defining Beverage Price
 
-Coffee_price = 3
-Espresso_price = 5
-Frappuccino_price = 7
-Latte_price = 6
-Tea_price = 2
-Cappuccino_price = 4
+COFFEE_PRICE = 3
+ESPRESSO_PRICE = 5
+FRAPPUCCINO_PRICE = 7
+LATTE_PRICE = 6
+TEA_PRICE = 2
+CAPPUCCINO_PRICE = 4
 
-amount = input("How many " + order.capitalize() + "'s would you like?\n> ")
+AMOUNT = input("How many " + ORDER.capitalize() + "'s would you like?\n> ")
 
 # Defining Total Cost Based On Beverage Chosen
 
-if order == "Coffee".casefold():
-    total = Coffee_price * int(amount)
-if order == "Espresso".casefold():
-    total = Espresso_price * int(amount)
-if order == "Frappuccino".casefold():
-    total = Frappuccino_price * int(amount)
-if order == "Latte".casefold():
-    total = Latte_price * int(amount)
-if order == "Tea".casefold():
-    total = Tea_price * int(amount)
-if order == "Cappuccino".casefold():
-    total = Cappuccino_price * int(amount)
+if ORDER == "Coffee".casefold():
+    total = COFFEE_PRICE * int(AMOUNT)
+if ORDER == "Espresso".casefold():
+    total = ESPRESSO_PRICE * int(AMOUNT)
+if ORDER == "Frappuccino".casefold():
+    total = FRAPPUCCINO_PRICE * int(AMOUNT)
+if ORDER == "Latte".casefold():
+    total = LATTE_PRICE * int(AMOUNT)
+if ORDER == "Tea".casefold():
+    total = TEA_PRICE * int(AMOUNT)
+if ORDER == "Cappuccino".casefold():
+    total = CAPPUCCINO_PRICE * int(AMOUNT)
 
 print("Thank you. Your total is: $" + str(total) + ".00\n")
 
@@ -71,14 +72,15 @@ time.sleep(3)
 
 # Making Beverage
 
-if amount == "1":
-    print("Thank you " + name.capitalize() + ", we'll have your " + order.capitalize() + " ready soon.\n")
+if AMOUNT == "1":
+    print("Thank you " + NAME.capitalize() + ", we'll have your " +
+          ORDER.capitalize() + " ready soon.\n")
     time.sleep(4)
-    print("Here is your " + order.capitalize())
+    print("Here is your " + ORDER.capitalize())
 else:
-    print("Thank you " + name.capitalize() + ", we'll have your " +
-          amount + " " + order.capitalize() + "'s ready soon.\n")
+    print("Thank you " + NAME.capitalize() + ", we'll have your " +
+          AMOUNT + " " + ORDER.capitalize() + "'s ready soon.\n")
     time.sleep(4)
-    print("Here is your " + order.capitalize() + ".")
+    print("Here is your " + ORDER.capitalize() + ".")
 
 input("\nHAVE A NICE DAY!!\n")
