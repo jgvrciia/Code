@@ -1,4 +1,5 @@
 # Let's Build A Bobot Barista
+
 import time
 
 print("Hello, Welcome to Baytech Coffee!!!\n\n\n")
@@ -7,6 +8,7 @@ time.sleep(3)
 name = input("What is your name?\n> ")
 
 # We Don't Want Evil Diego's Or Duc's In Our Shop
+
 if name.capitalize() == "Diego" or name.capitalize() == "Duc":
     evil = input("Are you evil? (yes/no)\n> ")
     if evil.casefold() == "yes":
@@ -28,12 +30,16 @@ menu = "Coffee: $3 \nEspresso: $5 \nFrappuccino: $7 \nLatte: $6 \nTea: $2 \nCapp
 order = input(
     ("What would you like to drink? Today's menu is:\n" + menu + "\n> ")).casefold()
 
+# Loop For Ordering The Right Beverage
+
 while order != "Coffee".casefold() and order != "Espresso".casefold() and order != "Frappuccino".casefold() and order != "Latte".casefold() and order != "Tea".casefold() and order != "Cappuccino".casefold():
     print("Sorry we don't make that here. Please choose a menu option.")
     order = input(
         ("What would you like to drink? Today's menu is\n" + menu + "\n> ")).casefold()
 
 print("Sounds good " + name.capitalize() + ".")
+
+# Defining Beverage Price
 
 Coffee_price = 3
 Espresso_price = 5
@@ -43,6 +49,8 @@ Tea_price = 2
 Cappuccino_price = 4
 
 amount = input("How many " + order.capitalize() + "'s would you like?\n> ")
+
+# Defining Total Cost Based On Beverage Chosen
 
 if order == "Coffee".casefold():
     total = Coffee_price * int(amount)
@@ -60,6 +68,8 @@ if order == "Cappuccino".casefold():
 print("Thank you. Your total is: $" + str(total) + ".00\n")
 
 time.sleep(3)
+
+# Making Beverage
 
 if amount == "1":
     print("Thank you " + name.capitalize() + ", we'll have your " + order.capitalize() + " ready soon.\n")
