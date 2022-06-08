@@ -26,9 +26,7 @@ while order != "Coffee".casefold() and order != "Espresso".casefold() and order 
     order = input(
         ("What would you like to drink? Today's menu is\n" + menu + "\n> ")).casefold()
 
-
 print("Sounds good " + name.capitalize())
-
 
 Coffee_price = 3
 Espresso_price = 5
@@ -38,7 +36,6 @@ Tea_price = 2
 Cappuccino_price = 4
 
 amount = input("How many " + order.capitalize() + "'s would you like?\n> ")
-
 
 if order == "Coffee".casefold():
     total = Coffee_price * int(amount)
@@ -59,8 +56,12 @@ time.sleep(3)
 
 if amount == "1":
     print("Thank you " + name + ", We'll have your " + order + " ready soon")
+    time.sleep(4)
+    print("Here is your " + order)
 else:
     print("Thank you " + name + ", We'll have your " +
           amount + " " + order + "'s ready soon")
+    time.sleep(4)
+    print("Here is your " + order)
 
 input("HAVE A NICE DAY!!")
